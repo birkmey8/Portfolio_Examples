@@ -25,17 +25,8 @@ You can wire those to GA4/GTM dataLayer pushes or direct `gtag()` calls, dependi
 
 **TL;DR:** Regex + dataLayer validation → routed eligible users to a targeted promo → measurable lift in engagement and **+10% monthly revenue** during the test window.
 
-[![Regex routing snippet](https://github.com/birkmey8/TicketMaster_Examples/raw/main/ab-testing-modal/images/full_js_code.jpg)](https://github.com/birkmey8/TicketMaster_Examples/blob/main/ab-testing-modal/images/full_js_code.jpg)
+[![Regex routing snippet](https://github.com/birkmey8/TicketMaster_Examples/raw/main/ab-testing-modal/images/full_js_code.jpg)](https://github.com/birkmey8/TicketMaster_Examples/blob/main/ab-testing-modal/images/full_js_code.jpg)  
 *Redacted snippet: core logic only. Full implementation excluded due to company policy.*
-
-### Metrics Snapshot
-| Metric                     | Control | Variant | Lift        | Notes                     |
-|---------------------------|:-------:|:-------:|:-----------:|---------------------------|
-| Click-through to Promo    |   —     |   —     | +X%         | Instrumented via dataLayer|
-| Promo Conversion Rate     |   —     |   —     | +Y%         | 95% CI, p < 0.05          |
-| Monthly Revenue (Test)    |   —     |   —     | **+10%**    | During test period        |
-
-> Replace X/Y with your safe, rounded figures (or leave as placeholders).
 
 ### Case Study
 
