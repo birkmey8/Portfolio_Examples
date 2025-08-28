@@ -22,7 +22,8 @@ You can wire those to GA4/GTM dataLayer pushes or direct `gtag()` calls, dependi
 ----------------------------
 
 #### Code Snippet (Redacted)
-![Regex routing snippet](ab-testing-modal/images/full_js_code.jpg)
+[![Regex routing snippet](https://github.com/birkmey8/TicketMaster_Examples/raw/main/ab-testing-modal/images/full_js_code.jpg)](https://github.com/birkmey8/TicketMaster_Examples/blob/main/ab-testing-modal/images/full_js_code.jpg)
+
 *This image shows the core logic only; full implementation is excluded due to company policy.*
 
 Case Study: Personalized Promotion Routing with A/B Testing
