@@ -1,6 +1,6 @@
 # LookML + SQL – GA4 Campaign Analytics View
 
-A sanitized LookML view that models GA4 purchase events with user properties and campaign attribution fields. This is intended to power dashboards focused on campaign performance and revenue attribution.
+A  LookML view that models GA4 purchase events with user properties and campaign attribution fields. This is intended to power dashboards focused on campaign performance and revenue attribution.
 
 ## Notes
 - Replace `project.dataset.events_*` with your BigQuery GA4 export dataset.
