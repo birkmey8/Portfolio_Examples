@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modal Video Hero – A/B Test Variant</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <h1>See How It Works</h1>
+      <p>Short explainer to help users understand the value before they start.</p>
+      <button id="watch-demo" class="btn btn-primary">Watch Demo</button>
+    </div>
+  </header>
+
+  <!-- Modal -->
+  <div id="video-modal" class="modal" aria-hidden="true" role="dialog" aria-label="Demo Video">
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <div class="modal__body">
+        <div class="responsive-video">
+          <!-- Replace src with a public video or embed -->
+          <iframe id="demo-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
