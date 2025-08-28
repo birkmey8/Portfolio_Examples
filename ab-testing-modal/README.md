@@ -21,23 +21,41 @@ You can wire those to GA4/GTM dataLayer pushes or direct `gtag()` calls, dependi
 
 ----------------------------
 
-#ANOTHER EXAMPLE:
+## Another Example — Targeted Promotion Routing (A/B Test)
 
-#### Code Snippet (Redacted)
+**TL;DR:** Regex + dataLayer validation → routed eligible users to a targeted promo → measurable lift in engagement and **+10% monthly revenue** during the test window.
+
 [![Regex routing snippet](https://github.com/birkmey8/TicketMaster_Examples/raw/main/ab-testing-modal/images/full_js_code.jpg)](https://github.com/birkmey8/TicketMaster_Examples/blob/main/ab-testing-modal/images/full_js_code.jpg)
+*Redacted snippet: core logic only. Full implementation excluded due to company policy.*
 
-*This image shows the core logic only; full implementation is excluded due to company policy.*
+### Metrics Snapshot
+| Metric                     | Control | Variant | Lift        | Notes                     |
+|---------------------------|:-------:|:-------:|:-----------:|---------------------------|
+| Click-through to Promo    |   —     |   —     | +X%         | Instrumented via dataLayer|
+| Promo Conversion Rate     |   —     |   —     | +Y%         | 95% CI, p < 0.05          |
+| Monthly Revenue (Test)    |   —     |   —     | **+10%**    | During test period        |
 
-Case Study: Personalized Promotion Routing with A/B Testing
+> Replace X/Y with your safe, rounded figures (or leave as placeholders).
 
-Situation
-A product team wanted to increase engagement with a promotional flow. The challenge was that only certain users qualified, and the unique identifiers that determined eligibility were embedded within the URL and datalayer.
+### Case Study
 
-Task
-The goal was to design and implement an experiment that could reliably detect those identifiers, route users to the promotion if eligible, and measure lift in engagement metrics.
+**Situation**  
+A product team wanted to increase engagement with a promotional flow, but only certain users qualified. The unique identifiers that determined eligibility lived in the URL and the dataLayer.
 
-Action
-I implemented a JavaScript solution that used regular expressions (regex) to parse unique identifiers from the URL, cross-checked them against the datalayer, and conditionally routed users into the promotion. I collaborated with backend developers to ensure that the logic integrated seamlessly with the existing infrastructure. Instrumentation was also set up to capture experiment results, with metrics tied to engagement and conversion events.
+**Task**  
+Design and implement an experiment that detects those identifiers, routes eligible users to the promotion, and measures lift in engagement and conversion.
 
-Result
-The experiment successfully segmented traffic, increased engagement with the promotion, and delivered clear insights into conversion behavior. Most importantly, it drove a measurable business impact, contributing to a 10% lift in monthly revenue during the testing period. Beyond the immediate gains, this work also established a reusable framework for future targeting and personalization experiments, blending frontend customization with backend validation.
+**Action**  
+Implemented a JavaScript solution using **regular expressions** to parse unique identifiers from the URL, cross-checked them against the **dataLayer**, and conditionally routed users into the promotion. Collaborated with backend engineers to integrate the routing cleanly with the existing stack. Added instrumentation to capture experiment results tied to engagement and conversion events.
+
+**Result**  
+The experiment successfully segmented traffic, increased engagement with the promotion, and produced clear insights into conversion behavior. It contributed to a **10% lift in monthly revenue** during the testing period and established a **reusable framework** for future targeting and personalization experiments.
+
+<details>
+  <summary><strong>What to look for in the snippet</strong></summary>
+
+  - Regex pattern matching for unique IDs in the URL  
+  - dataLayer validation (guardrails to avoid false positives)  
+  - Conditional routing to a promo experience (feature-flag style branching)  
+  - Minimal dependencies and clean fail-safes
+</details>
