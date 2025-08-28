@@ -21,6 +21,8 @@ You can wire those to GA4/GTM dataLayer pushes or direct `gtag()` calls, dependi
 
 ----------------------------
 
+#ANOTHER EXAMPLE:
+
 #### Code Snippet (Redacted)
 [![Regex routing snippet](https://github.com/birkmey8/TicketMaster_Examples/raw/main/ab-testing-modal/images/full_js_code.jpg)](https://github.com/birkmey8/TicketMaster_Examples/blob/main/ab-testing-modal/images/full_js_code.jpg)
 
